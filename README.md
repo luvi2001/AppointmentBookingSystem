@@ -4,7 +4,7 @@ Frontend
     open new terminal
     cd appointmentbooking
     npx expo start
-    Scan the qr through expo app since i have used datetime pickers they won't support on web. 
+    Scan the qr through expo app since i have used datetime pickers they won't support on web but other functions will work. 
 
 Backend 
     open new terminal
@@ -17,7 +17,7 @@ AdminLogin: admin@gmail.com
 UserLogin: john@gmail.com
            20012001
 
-           
+
 Features
     Admin: 
        Create appointmentslot
