@@ -4,7 +4,6 @@ const sql = neon(process.env.DATABASE_URL); // Initialize NeonDB client
 const createAppointmentSlot = async (req, res) => {
   const { date, start_time, end_time } = req.body;
 
-  console.log("Received request:", req.body); // Debugging log
 
   if (!date || !start_time || !end_time) {
     return res.status(400).json({ message: "All fields are required." });
@@ -83,7 +82,6 @@ const getAvailableSlots = async (req, res) => {
       };
     });
     
-    console.log(adjustedSlots);
     // Send the adjusted slots to the frontend
     res.status(200).json({ slots: adjustedSlots });
   } catch (error) {
@@ -221,8 +219,6 @@ const cancelAppointment = async (req, res) => {
     const formattedDate = new Date(date).toISOString().split("T")[0]; // Ensure correct format
     const formattedTime = start_time.split(".")[0]; // Remove milliseconds if present
 
-    console.log("Formatted Date:", formattedDate);
-    console.log("Formatted Time:", formattedTime);
 
     // Delete the appointment
     await sql`

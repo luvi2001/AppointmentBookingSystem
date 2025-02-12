@@ -12,9 +12,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const signUp = async (req, res) => {
     const { name, email, nic, phone, password } = req.body;
   
-    // Log the request body to inspect it
-    console.log(req.body); // Log the data sent from frontend
-    
+      
     // Validate the required fields
     if (!name || !email || !nic || !phone || !password) {
       return res.status(400).json({ message: "All fields are required." });
@@ -78,7 +76,8 @@ const signUp = async (req, res) => {
 // Login Controller: Handles user login
 const login = async (req, res) => {
     const { email, password } = req.body;
-   console.log(req.body);
+    
+    
     if (!email || !password) {
       return res.status(400).json({ message: "Email and password are required." });
     }
