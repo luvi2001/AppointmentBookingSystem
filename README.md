@@ -11,6 +11,13 @@ Backend
     cd backend
     node server.js
 
+AdminLogin: admin@gmail.com
+            admin2001
+
+UserLogin: john@gmail.com
+           20012001
+
+           
 Features
     Admin: 
        Create appointmentslot
