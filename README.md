@@ -5,7 +5,7 @@ Frontend
     cd appointmentbooking
     npx expo start
     Scan the qr through expo app since i have used datetime pickers they won't support on web but other functions will work. 
-
+    please replace your ip address with your network ip in api urls in frontend screens.
 Backend 
     open new terminal
     cd backend
