@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, TextInput, Text, StyleSheet, TouchableOpacity, Image, Dimensions } from 'react-native';
 
+const { width, height } = Dimensions.get('window');
+
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -83,10 +85,11 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   backgroundImage: {
-    position: 'absolute', 
-    width: '200%',
-    height: '200%',
-    resizeMode: 'cover', // Ensures it covers the screen fully
+    ...StyleSheet.absoluteFillObject, // Ensures it covers the screen fully
+    width: width,
+    height: height,
+    resizeMode: 'cover',
+    opacity: 0.4, // Adjust opacity to blend background better with content
     zIndex: -1, // Places it behind the content
   },
   title: { 

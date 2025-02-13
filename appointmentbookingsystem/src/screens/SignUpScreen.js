@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { View, TextInput, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, TextInput, Text, StyleSheet, TouchableOpacity, Image,Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
+
 
 const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState('');
@@ -106,8 +109,8 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     ...StyleSheet.absoluteFillObject, // Positioning to cover the screen
-    width: '200%',
-    height: '200%',
+    width: width,
+    height: height,
     resizeMode: 'cover',
     opacity: 0.4, // Adjust opacity to blend background better with content
     zIndex: -1, // Make sure the image is behind the content
