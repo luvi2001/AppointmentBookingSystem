@@ -4,7 +4,7 @@ import {
 } from "react-native";
 import axios from "axios";
 
-const API_URL = "http://192.168.8.169:3000/api/appointments/appointment-slots"; // Backend API URL
+const API_URL = "https://appointmentbookingsystem-kvdr.onrender.com/api/appointments/appointment-slots"; // Backend API URL
 
 const AppointmentsScreen = () => {
   const [slots, setSlots] = useState([]);

@@ -22,7 +22,7 @@ const SignUpScreen = ({ navigation }) => {
     const userData = { name, email, nic, phone, password };
 
     try {
-      const response = await fetch('http://192.168.8.169:3000/api/auth/signup', {
+      const response = await fetch('https://appointmentbookingsystem-kvdr.onrender.com/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData),

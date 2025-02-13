@@ -81,7 +81,7 @@ const AddAppointmentSlotScreen = () => {
     };
 
     try {
-      const response = await fetch('http://192.168.8.169:3000/api/appointments/create', {
+      const response = await fetch('https://appointmentbookingsystem-kvdr.onrender.com/api/appointments/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(slotData),

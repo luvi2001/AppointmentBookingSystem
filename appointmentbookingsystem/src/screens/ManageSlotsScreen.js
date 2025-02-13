@@ -6,7 +6,7 @@ import {
 import axios from "axios";
 import { useFocusEffect } from "@react-navigation/native";
 
-const API_URL = "http://192.168.8.169:3000/api/appointments"; // Backend API URL
+const API_URL = "https://appointmentbookingsystem-kvdr.onrender.com/api/appointments"; // Backend API URL
 
 const ManageSlotsScreen = ({ navigation }) => {
   const [slots, setSlots] = useState([]);

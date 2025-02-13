@@ -8,7 +8,7 @@ import { jwtDecode } from "jwt-decode";
 import { useFocusEffect } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
 
-const API_URL = "http://192.168.8.169:3000/api/appointments"; // Backend API URL
+const API_URL = "https://appointmentbookingsystem-kvdr.onrender.com/api/appointments"; // Backend API URL
 
 const AvailableSlotsScreen = ({ route, navigation }) => {
   const { token } = route.params; // Get the token from navigation
